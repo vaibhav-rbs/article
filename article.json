@@ -1,0 +1,23 @@
+[
+{
+    "pk": 1, 
+    "model": "article.article", 
+    "fields": {
+        "body": "ou can tell a lot about somebody by the way they manage their money. So the latest financial-disclosure details from Barack and Michelle Obama provide fresh insights into the character of the world\u2019s leading power couple.\r\nThe Obamas\u2019 net worth is somewhere between $1.9 million and $6.9 million, according to disclosure rules that allow elected officials to report the value of their assets within a wide range, allowing for large swings in value. Obama has readily acknowledged he\u2019s a member of the one percent, though he\u2019s not nearly as wealthy as other presidents were during their tenures, such as both Bushes, Ronald Reagan and John F. Kennedy.\r\nThe Obamas don\u2019t act like fat-cats either: Their investments are mostly plain-vanilla assets that Wall Street money managers might find naively simplistic. Yet the Obamas\u2019 portfolio does reveal a certain worldview and an outlook for the future. Here are five takeaways from the Obamas\u2019 disclosure forms:\r\nIn the long run, the Obamas have faith in the U.S. economy. Roughly 15 percent of the Obamas\u2019 money is invested in S&P 500 stock index funds, which in general rise or fall along with the U.S. economy. This money is in retirement funds, so the Obamas aren\u2019t planning to tap it for a couple of decades at least, but by putting a large portion of their overall nest egg in U.S. stocks, the Obamas are betting that the U.S. economy will remain dominant for years to come. These funds appear to be the only direct stock investments the Obamas have.", 
+        "thumbnail": "", 
+        "pub_date": "2013-05-16T05:00:00Z", 
+        "likes": 11, 
+        "title": "How the Obamas Manage Their Money"
+    }
+},
+{
+    "pk": 1, 
+    "model": "article.comment", 
+    "fields": {
+        "body": "Only 15% in S & P 500? I wouldn't call that \" betting on the US economy\". Looks like he doesn't have any more faith in his policies than we do. What happened to the blind trust? The Dems questioned Romney's blind trust and he wasn't even holding office.", 
+        "article": 1, 
+        "pub_date": "2013-05-16T21:42:57Z", 
+        "name": "Steve"
+    }
+}
+]

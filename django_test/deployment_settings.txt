@@ -1,0 +1,11 @@
+sudo pip install gunicorn dj-database-url boto django-storages
+
+modules will help us to deploy, we want to mimic our enviorment online
+
+gunicorn :- python bases webserver, replacement for "manage.py runserver" command, we will be using heroku webhosting for deployment, deploy the static file on amazon S3(a cloud based file delivery systme).  
+
+dj-database-url :- it takes advangae to setting that heroku uses for accesing developemnet database
+
+boto :- a module for interacting with Amazon webservices S3
+
+django-storages:-

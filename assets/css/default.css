@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+    <html lang= "en">
+        <head>
+            <title>{% block title %}My base Template{% endblock %}</title>
+            <style type="text/css">
+            <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+            body{
+                text-align: center;
+            }
+            
+            #page {
+                width: 960px;
+                text-align: left;
+                margin: 10px auto 20px auto;
+                background-color: #D3C5CB;   
+            }
+            
+            #sidebar {
+                float: left;
+                width: 200px;
+                border: 1px solid #000;
+            }
+            
+            #content{
+                float: left;
+                width: 600px;
+                border: 1px solid #f00;
+                padding: 10px;
+            }
+            </style>
+            
+        </head>
+        
+        <body>
+        <script src="http://code.jquery.com/jquery.js"></script>
+    	<script src="js/bootstrap.min.js"></script>
+            <div id="page">
+                <div id="sidebar">
+                    {% block sidebar %}
+                        <ul>
+                            <li><a href="/articles/all">Articles</a></li>
+                            <li><a href="/admin/">Admin</a></li>
+                        </ul>
+                    {% endblock %}
+                </div>
+                <div id="content">
+                    {% block content %}This is content the Area{% endblock %}
+                </div>
+            </div>
+        </body>
+        
+    </html>

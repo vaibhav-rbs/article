@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Register</h2>
+
+<form action="/accounts/register/" method="post">{% csrf_token %}
+    <! now only form is needed to be rendered >
+    {{ form }}
+    
+    <input type="submit" value="Register" />
+<! when we hit submit button we have to go to the /accounts/register/ url in order to activate the django_test.views.register_user 																		url(r'^accounts/register/$','django_test.views.register_user'),>
+    
+</form>
+
+{% endblock %}

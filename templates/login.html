@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!--we are using dictionary c that was passed thru from login view base-->
+    {% if form.errors %}
+    <p class ="error"> Sorry, that's not a valid username or password</p>
+    {% endif %}
+    
+    <form action="/accounts/auth/" method="post">{% csrf_token %}
+    <!--Declare a form and action is to post thru auth url using post method using csrf token ,username and the password,basically it goes and activate 	 	 auth_view method-->
+    <!--crsf_token basically equates to be a hidden string and string is unique url or string so this is what will be check when we post back to the url and 		confirm this being valid or invalid-->
+        <label for="username" >User name</label>
+        <input type= "text" name="username" value="" id="username">
+        <label for="password" >Password:</label>
+        <input type="password" name="password" value="password" id="password">
+        
+        <input type="submit" value="login"/>
+    </form>
+{% endblock %}

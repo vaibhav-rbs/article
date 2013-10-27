@@ -1,6 +1,6 @@
-#allow us to render a template back to the browser.
+# Allow us to render a template back to the browser.
 from django.shortcuts import render_to_response
-# allows to redirect the browser to diffrent URL'S.  
+# Allows to redirect the browser to diffrent URL'S.  
 from django.http import HttpResponseRedirect 
 # Takes care of checking user name and password and confirming that user is logged in or else logging them out.
 from django.contrib import auth 
@@ -17,7 +17,7 @@ from django.core.mail import send_mail
 #logr = logging.getlogger(__name__)
 
 def login(request):
-	# create a dict 'c'
+    # create a dict 'c'
     c = {} 
     # push csrf object
     c.update(csrf(request))

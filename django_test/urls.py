@@ -20,8 +20,9 @@ urlpatterns = patterns('',
     
     # user auth urls
     url(r'^accounts/login/$','django_test.views.login'),
-    #url(r'^vaibhav/login/$','django_test.views.login'),
-    url(r'^accounts/auth/$','django_test.views.auth_view'),# do not name your view as auth as this will clash with Django's arch.
+    # url(r'^vaibhav/login/$','django_test.views.login'),
+    url(r'^accounts/auth/$','django_test.views.auth_view'),
+    """do not name your view as auth as this will clash with Django's arch."""
     url(r'^accounts/logout/$','django_test.views.logout'),
     url(r'^accounts/loggedin/$','django_test.views.loggedin'),
     url(r'^accounts/invalid/$','django_test.views.invalid_login'),

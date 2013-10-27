@@ -16,7 +16,10 @@ class Article(models.Model):
     body = models.TextField()
     pub_date = models.DateTimeField('date publised')
     likes = models.IntegerField(default =0)
-    thumbnail = models.FileField(upload_to=get_upload_file_name,null=True, blank=True)# get_upload_file_name is a function
+    # get_upload_file_name is a function
+    thumbnail = models.FileField(
+        upload_to=get_upload_file_name, null=True, blank=True
+        )
     
     def __unicode__(self):
         return(self.title)
@@ -40,10 +43,12 @@ class Comment(models.Model):
     pub_date = models.DateTimeField('date publised')
     article = models.ForeignKey(Article,null=True, blank=True)
     
-    ''' for Fixtures use python manage.py dumpdata article --indent=4 > article.json #this puts the data into .json file
-        call article.json to check if everthing is ok
-        use python manage.py sqlclear article #for clearing the tables and data with old schema
-        use python manage.py dbshell #for creating new tables articles and comments
-        use python manage.py loaddata article.json #for uploading data from fixtures to the database  '''
+    ''' for Fixtures use python manage.py dumpdata article 
+    --indent=4 > article.json #this puts the data into .json
+    file call article.json to check if everthing is ok
+    use python manage.py sqlclear article #for clearing the tables 
+    and data with old schema use python manage.py dbshell for creating
+    new tables articles and comments use python manage.py loaddata 
+    article.json #for uploading data from fixtures to the database  '''
  
     

@@ -5,10 +5,9 @@ class ArticleForm(forms.ModelForm):
 	
 	class Meta:
 		model = Article
-		# include the name of the fields in the models.py to display in the 
-		# meta function.
+		# include the name of the fields in the models.py to disp                # lay in the meta function.
 		fields = ('title','body','pub_date','thumbnail')
-		
+
 class CommentForm(forms.ModelForm):
 	
 	class Meta:

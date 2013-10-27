@@ -1,7 +1,7 @@
 from django.shortcuts import render_to_response
-from article.models import Article,Comment
+from article.models import Article, Comment
 from django.http import HttpResponse
-from form import ArticleForm,CommentForm
+from form import ArticleForm, CommentForm
 from django.http import HttpResponseRedirect
 from django.core.context_processors import csrf
 from django.utils import timezone

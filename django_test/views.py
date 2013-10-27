@@ -25,29 +25,35 @@ def login(request):
     return render_to_response('login.html',c)
 
 def auth_view(request):
-	# goes into the request and looks for POST dict information from the form and gets username and password,notice there is a default empty string
-	# the empty string is for the case if there is no value for user name and password as it does not exist yet then we will have empty string returned in 		
-	# the variable as get method breaks when we dont have a value, Basically its a nice way of saying if you dont find something then return something 	
-	# something nicer instead of breaking the code.   
+	# goes into the request and looks for POST dict information from the 
+        # form and gets username and password,notice there is a default empty string
+	# the empty string is for the case if there is no value for user name 
+        # and password as it does not exist yet then we will have empty string returned i        # n the variable as get method breaks when we dont have a value, 
+        # Basically its a nice way of saying if you dont find something then return 
+        # something nicer instead of breaking the code.   
     username = request.POST.get('username','') 
     password = request.POST.get('password','')
-    # it is the main check, use authenticate method of auth object and pass it to username and password variables and this will go in and check if user
-    # exist. If user does exists then it will return a user object if there is no match then it returns None, authenticate does not log the user in it just 
+    # it is the main check, use authenticate method of auth object and pass it
+    # to username and password variables and this will go in and check if user
+    # exist. If user does exists then it will return a user object if there is 
+    # no match then it returns None, authenticate does not log the user in it just 
     # checks the user existence. 
     user = auth.authenticate(username= username,password=password)
     
     if user is not None:
     	# if there is a user then use the auth object and log the user in the system using login method
         auth.login(request,user)
-        # use HttpResponseRedirect object so that the browser is redirected to the url 'accounts/loggedin' which will execute loggedin view which is
+        # use HttpResponseRedirect object so that the browser is redirected to 
+        # the url 'accounts/loggedin' which will execute loggedin view which is
         # defined right after this view   
         return HttpResponseRedirect('/accounts/loggedin') 
-        # if user is not found then, use HttpResponseRedirect object so that the browser is redirected to the url 'accounts/invalid' which will execute  			
+        # if user is not found then, use HttpResponseRedirect object so that 
+        # the browser is redirected to the url 'accounts/invalid' which will execute 
         # invalid_login view which is defined right after this loggedin view 
     else:
        return HttpResponseRedirect('/accounts/invalid')
-       
-	# loggedin basically renders loggedin.html and passes thru the full_name variable which we embed insdie the loggedin.html page
+	# loggedin basically renders loggedin.html and passes thru the full_name 
+        # variable which we embed insdie the loggedin.html page
 def loggedin(request):
 	# request.user has various properties and username is one of them
     return render_to_response('loggedin.html',
@@ -57,7 +63,8 @@ def invalid_login(request):
     return render_to_response('invalid_login.html')
 
 def logout(request):
-	# auth has a method called log out for logging out the user and rendering the logout.html file
+	# auth has a method called log out for logging out the user and rendering 
+        # the logout.html file
     auth.logout(request)
     return render_to_response('logout.html')
 
@@ -65,10 +72,12 @@ def register_user(request):
 	# If the form has been submitted...
     if request.method == "POST":
     	# form = UserCreationForm(request.POST)
-    	# we are going to pass the values of request.POST a dictionary to UserCreationForm and create a form object
+    	# we are going to pass the values of request.POST a dictionary to 
+        # UserCreationForm and create a form object
     	# A form bound to the POST data
         form = MyRegistrationForm(request.POST)
-        # if form is validated then the form object should be saved with the resgitration information of the new user 
+        # if form is validated then the form object should be saved 
+        # with the resgitration information of the new user 
         if form.is_valid():
             form.save()
             # now HttpResponseRedirect takes us to  url(r'^accounts/register_success/$','django_test.views.register_success')

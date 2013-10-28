@@ -5,7 +5,13 @@ from form import ArticleForm, CommentForm
 from django.http import HttpResponseRedirect
 from django.core.context_processors import csrf
 from django.utils import timezone
+from django.conf import settings
+#from haystack.query import SearchQuerySet
 
+import logging
+
+# Define a global variable.
+logr = logging.getLogger(__name__)
 
 def articles(request): 
     language = 'en-us'

@@ -13,8 +13,6 @@ from forms import MyRegistrationForm
 from django.contrib.formtools.wizard.views import SessionWizardView
 # we will be sending mails using send_mail library
 from django.core.mail import send_mail
-#import logging
-#logr = logging.getlogger(__name__)
 
 def login(request):
     # create a dict 'c'
@@ -99,12 +97,11 @@ def register_success(request):
 
 
 # IMPORTANT: when we use auth method in our
-# views we have to do syncdb for making 
-# corresponding DB tables thats deals with 
-#the user, for storing thier name,passwrod email
-
-# we have to use Session Wizard which is a class 
-# based view as we cannot use fucntion based views
+# views we have to do syncdb for corresponding 
+# DB tables thats deals with the user, for storing 
+# thier name,password email we have to use Session
+# Wizard which is a class based view as we cannot 
+# use function based views.
 
 class ContactWizard(SessionWizardView):
     template_name = "contact_form.html"

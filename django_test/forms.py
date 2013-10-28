@@ -7,8 +7,9 @@ class MyRegistrationForm(UserCreationForm):
     email = forms.EmailField(required = True)
     
     class Meta:
-    #to hold anything which is not in field meta data for actual class, way to tell Django about what the model is and what field its going to 
-    #contain
+    # to hold anything which is not in field meta data for actual class, 
+    # way to tell Django about what the model is and what field its going 
+    # to contain
         model = User
         fields = ('username','email','password1','password2')
     
@@ -22,12 +23,11 @@ class MyRegistrationForm(UserCreationForm):
         return user
     
     
-# we will demostrate how to carry information among difffrent pages
+# we will demostrate how to carry information among diffrent pages.
 
 class ContactForm1(forms.Form):
 	subject = forms.CharField(max_length = 100)
 	    
-	  
 class ContactForm2(forms.Form):
 	sender = forms.EmailField()
 	

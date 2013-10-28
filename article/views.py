@@ -23,6 +23,7 @@ def articles(request):
     args['articles'] = Article.objects.all()
     args['language'] = language
     args['session_language'] = session_language
+
     return render_to_response('articles.html',args)
 
 def article(request,article_id =1):

@@ -7,7 +7,7 @@ from django.db import models
 from time import time # for form time stamp
 
 def get_upload_file_name(instance, filename):
-    return settings.UPLOAD_FILE_PATTERN % (str(time()).replace('.','_'), filename)
+    return "uploaded_files/%s_%s" % (str(time()).replace('.','_'), filename)
 
 # Create your models here.
 

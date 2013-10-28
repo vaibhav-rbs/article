@@ -4,7 +4,7 @@ $(function(){
         
         $.ajax({
             type: "POST",
-            url:"article/search/",
+            url:"/articles/search/",
             data:{
                 'search_text': $('#search').val(),
                 'csrfmiddlewaretoken': $("input[name=csrfmiddlewaretoken]").val()
@@ -17,6 +17,7 @@ $(function(){
     
  });
 
-function searchSuccess(data,textStatus,jqXHR) {
+function searchSuccess(data, textStatus, jqXHR) 
+{
     $('#search-results').html(data);
 }

@@ -1,23 +1,34 @@
 [
-{
-    "pk": 1, 
-    "model": "article.article", 
-    "fields": {
-        "body": "ou can tell a lot about somebody by the way they manage their money. So the latest financial-disclosure details from Barack and Michelle Obama provide fresh insights into the character of the world\u2019s leading power couple.\r\nThe Obamas\u2019 net worth is somewhere between $1.9 million and $6.9 million, according to disclosure rules that allow elected officials to report the value of their assets within a wide range, allowing for large swings in value. Obama has readily acknowledged he\u2019s a member of the one percent, though he\u2019s not nearly as wealthy as other presidents were during their tenures, such as both Bushes, Ronald Reagan and John F. Kennedy.\r\nThe Obamas don\u2019t act like fat-cats either: Their investments are mostly plain-vanilla assets that Wall Street money managers might find naively simplistic. Yet the Obamas\u2019 portfolio does reveal a certain worldview and an outlook for the future. Here are five takeaways from the Obamas\u2019 disclosure forms:\r\nIn the long run, the Obamas have faith in the U.S. economy. Roughly 15 percent of the Obamas\u2019 money is invested in S&P 500 stock index funds, which in general rise or fall along with the U.S. economy. This money is in retirement funds, so the Obamas aren\u2019t planning to tap it for a couple of decades at least, but by putting a large portion of their overall nest egg in U.S. stocks, the Obamas are betting that the U.S. economy will remain dominant for years to come. These funds appear to be the only direct stock investments the Obamas have.", 
-        "thumbnail": "", 
-        "pub_date": "2013-05-16T05:00:00Z", 
-        "likes": 11, 
-        "title": "How the Obamas Manage Their Money"
+    {
+        "pk": 1, 
+        "model": "article.article", 
+        "fields": {
+            "body": "India\r\nofficially the Republic of India (Bharat Ganrajya)[c], is a country in South Asia. It is the seventh-largest country by area, the second-most populous country with over 1.2 billion people, and the most populous democracy in the world. Bounded by the Indian Ocean on the south, the Arabian Sea on the south-west, and the Bay of Bengal on the south-east, it shares land borders with Pakistan to the west;[d] China, Nepal, and Bhutan to the north-east; and Burma and Bangladesh to the east. In the Indian Ocean, India is in the vicinity of Sri Lanka and the Maldives; in addition, India's Andaman and Nicobar Islands share a maritime border with Thailand and Indonesia.\r\nHome to the ancient Indus Valley Civilisation and a region of historic trade routes and vast empires, the Indian subcontinent was identified with its commercial and cultural wealth for much of its long history.[14] Four world religions\u2014Hinduism, Buddhism, Jainism, and Sikhism\u2014originated here, whereas Judaism, Zoroastrianism, Christianity, and Islam arrived in the 1st millennium CE and also helped shape the region's diverse culture. Gradually annexed by and brought under the administration of the British East India Company from the early 18th century and administered directly by the United Kingdom from the mid-19th century, India became an independent nation in 1947 after a struggle for independence that was marked by non-violent resistance led by Mahatma Gandhi.\r\nThe Indian economy is the world's tenth-largest by nominal GDP and third-largest by purchasing power parity (PPP).[15] Following market-based economic reforms in 1991, India became one of the fastest-growing major economies; it is considered a newly industrialised country. However, it continues to face the challenges of poverty, corruption, malnutrition, inadequate public healthcare, and terrorism. A nuclear weapons state and a regional power, it has the third-largest standing army in the world and ranks eighth in military expenditure among nations. India is a federal constitutional republic governed under a parliamentary system consisting of 28 states and 7 union territories. India is a pluralistic, multilingual, and multi-ethnic society. It is also home to a diversity of wildlife in a variety of protected habitats.", 
+            "thumbnail": "", 
+            "pub_date": "2013-10-27T02:56:11Z", 
+            "likes": 10, 
+            "title": "India"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "article.article", 
+        "fields": {
+            "body": "The following is a list of Hypertext Transfer Protocol (HTTP) response status codes. This includes codes from IETF internet standards as well as other IETF RFCs, other specifications and some additional commonly used codes. The first digit of the status code specifies one of five classes of response; the bare minimum for an HTTP client is that it recognises these five classes. The phrases used are the standard examples, but any human-readable alternative can be provided. Unless otherwise stated, the status code is part of the HTTP/1.1 standard (RFC 2616).\r\nThe Internet Assigned Numbers Authority (IANA) maintains the official registry of HTTP status codes.", 
+            "thumbnail": "", 
+            "pub_date": "2013-10-27T05:00:00Z", 
+            "likes": 4, 
+            "title": "List of HTTP status codes"
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "article.comment", 
+        "fields": {
+            "body": "I like coding in Django.", 
+            "article": 2, 
+            "pub_date": "2013-10-27T23:41:05.584Z", 
+            "name": "Vaibhav"
+        }
     }
-},
-{
-    "pk": 1, 
-    "model": "article.comment", 
-    "fields": {
-        "body": "Only 15% in S & P 500? I wouldn't call that \" betting on the US economy\". Looks like he doesn't have any more faith in his policies than we do. What happened to the blind trust? The Dems questioned Romney's blind trust and he wasn't even holding office.", 
-        "article": 1, 
-        "pub_date": "2013-05-16T21:42:57Z", 
-        "name": "Steve"
-    }
-}
 ]
